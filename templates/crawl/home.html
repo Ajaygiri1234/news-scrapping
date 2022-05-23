@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+      <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+      <!-- Bootstrap CSS -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Welcome! all in one offer system </title>
+  </head>
+
+
+
+
+
+
+
+
+
+           {% comment %}
+    <div class="col-lg-3 col-md-6 mb-4 ">
+
+     <div class="col mb-5">
+     <div class="card" style="width: 28rem;">
+  <img src="{{ post.image.url }}" class="img-fluid" alt="Responsive image" style="height: 100px ; width: 100px">
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.summary }}</p>
+    <a href="view_details?txt_SN={{ post.SN }}" class="btn btn-primary">View details</a>
+  </div>
+     </div>
+</div>
+{% endcomment %}
+
+      <!--Section: Products v.3-->
+      <section class="text-center mb-4">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+              {% for post in value %}
+
+                  <a href="{{ post.link }}"  class="grey-text" style="text-decoration: none; ;" >
+
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <!--Card-->      <h4 style="color: black">{{ post.heading }}</h4>
+
+            <div class="card">
+
+              <!--Card image-->
+              <div class="view overlay">
+                <img src="{{ post.img }}" class="img-fluid" alt="Responsive image" style="height: 180px ; width: 150px">
+
+                  <div class="mask rgba-white-slight"></div>
+
+              </div>
+              <!--Card image-->
+              <!--Card content-->
+              <div class="card-body text-center" >
+
+
+                <h5 class="font-weight-bold blue-text" >
+                  {{ post.author_name}}
+                </h5>
+                  <p> {{ post.description }}</p>
+
+              </div>
+              <!--Card content-->
+
+            </div>
+            <!--Card-->
+              </a>
+        </div>
+             <!-- Grid column-->
+      {% endfor %}
+
+        </div>
+          <!--Grid row-->
+      </section>
+
+
+
+</html>
